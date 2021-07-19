@@ -1,32 +1,33 @@
-package javaefetivo.capitulo02.item02;
+package javaefetivo.capitulo02.item02.telescoping;
 
 // Padrão telescoping constructor - não é escalável!
-public class TelescopingNutritionFacts {
+// O padrão telescoping constructor funciona, mas é difícil escrever o código do cliente quando se
+// tem muitos parâmetros, e é ainda mais difícil ler.
+public class NutritionFacts {
     private final int servingSize; // obrigatório
     private final int servings; // obrigatório
     private final int calories; // opcional
-    private final int fat;
+    private final int fat; // opcional
     private final int sodium; // opcional
     private final int carbohydrate; // opcional
 
-    public TelescopingNutritionFacts(int servingSize, int servings) {
+    public NutritionFacts(int servingSize, int servings) {
         this(servingSize, servings, 0);
     }
 
-    public TelescopingNutritionFacts(int servingSize, int servings, int calories) {
+    public NutritionFacts(int servingSize, int servings, int calories) {
         this(servingSize, servings, calories, 0);
     }
 
-    public TelescopingNutritionFacts(int servingSize, int servings, int calories, int fat) {
+    public NutritionFacts(int servingSize, int servings, int calories, int fat) {
         this(servingSize, servings, calories, fat, 0);
     }
 
-    public TelescopingNutritionFacts(
-            int servingSize, int servings, int calories, int fat, int sodium) {
+    public NutritionFacts(int servingSize, int servings, int calories, int fat, int sodium) {
         this(servingSize, servings, calories, fat, sodium, 0);
     }
 
-    public TelescopingNutritionFacts(
+    public NutritionFacts(
             int servingSize, int servings, int calories, int fat, int sodium, int carbohydrate) {
         this.servingSize = servingSize;
         this.servings = servings;
@@ -60,6 +61,3 @@ public class TelescopingNutritionFacts {
         return carbohydrate;
     }
 }
-
-// O padrão telescoping constructor funciona, mas é difícil escrever o código do cliente quando se
-// tem muitos parâmetros, e é ainda mais difícil ler.
