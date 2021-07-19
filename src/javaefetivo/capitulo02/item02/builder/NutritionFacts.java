@@ -5,7 +5,8 @@ package javaefetivo.capitulo02.item02.builder;
 // parâmetros nos métodos do construtor e no builder. Confira as invariantes envolvendo parâmetros
 // múltiplos nos construtor chamado pelo método build. Para protegê-las contra ataques, realize as
 // verificações nos campos do objeto, depois de copiar os parâmetros do builder. Se a verificação
-// falhar, lance uma IllegalArgumentException, cuja mensagem detalhada indica quais parâmetros estão inválidos.
+// falhar, lance uma IllegalArgumentException, cuja mensagem detalhada indica quais parâmetros estão
+// inválidos.
 public class NutritionFacts {
     private final int servingSize;
     private final int servings;
@@ -86,5 +87,14 @@ public class NutritionFacts {
 
     public int getCarbohydrate() {
         return carbohydrate;
+    }
+
+    public static void main(String[] args) {
+        NutritionFacts cocaCola =
+                new NutritionFacts.Builder(240, 8)
+                        .calories(100)
+                        .sodium(35)
+                        .carbohydrate(27)
+                        .build();
     }
 }
