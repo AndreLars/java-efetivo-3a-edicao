@@ -1,6 +1,6 @@
 package javaefetivo.capitulo02.item02.javabeans;
 
-// Um JavaBean pode apresentar um estado parcialmente inconsistente durante sua construção.
+// Um JavaBean pode apresentar um estado parcialmente inconsistente durante a sua construção.
 // O padrão JavaBeans exclui a possibilidade de uma classe ser imutável.
 public class NutritionFacts {
     private int servingSize; // obrigatório

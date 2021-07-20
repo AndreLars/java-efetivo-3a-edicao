@@ -1,6 +1,6 @@
 package javaefetivo.capitulo02.item02.telescoping;
 
-// Padrão telescoping constructor - não é escalável!
+// Padrão telescoping constructor: não é escalável!
 // O padrão telescoping constructor funciona, mas é difícil escrever o código do cliente quando se
 // tem muitos parâmetros, e é ainda mais difícil ler.
 public class NutritionFacts {
